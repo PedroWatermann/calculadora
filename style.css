@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculadora {
+    display: grid;
+    flex-direction: column;
+    max-width: 320px;
+    max-height: 700px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+#tela {
+    width: auto;
+    height: 60px;
+    font-size: 13px;
+    border-radius: 20px;
+    margin: 0 3px 0 3px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    margin: 0 12px 0 12px;
+    border-radius: 20px;
+}

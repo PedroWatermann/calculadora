@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="calculadora">
         <input id="tela" readonly>
         <div id="botoes">
-            <button onclick="limpaTela()">C</button>
-            <button onclick="mostrarNaTela('+')">/</button>
-            <button onclick="mostrarNaTela('+')">*</button>
-            <button onclick="mostrarNaTela('+')">-</button>
             <button onclick="mostrarNaTela('+')">7</button>
             <button onclick="mostrarNaTela('+')">8</button>
             <button onclick="mostrarNaTela('+')">9</button>
@@ -22,14 +19,16 @@
             <button onclick="mostrarNaTela('+')">4</button>
             <button onclick="mostrarNaTela('+')">5</button>
             <button onclick="mostrarNaTela('+')">6</button>
-            <button onclick="mostrarNaTela('+')">.</button>
+            <button onclick="mostrarNaTela('+')">-</button>
             <button onclick="mostrarNaTela('+')">1</button>
             <button onclick="mostrarNaTela('+')">2</button>
             <button onclick="mostrarNaTela('+')">3</button>
-            <button onclick="calcular()">=</button>
+            <button onclick="mostrarNaTela('+')">*</button>
             <button onclick="mostrarNaTela('+')">0</button>
-            <button onclick="mostrarNaTela('+')">00</button>
-            <button onclick="mostrarNaTela('+')">000</button>
+            <button onclick="limpaTela()">C</button>
+            <button onclick="mostrarNaTela('+')">.</button>
+            <button onclick="mostrarNaTela('+')">/</button>
+            <button class="igual" onclick="calcular()">=</button>
         </div>
     </div>
 </body>
