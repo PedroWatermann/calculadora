@@ -45,6 +45,7 @@ function apagaUm() {
     }
 }
 
+// Poderia ser um if
 document.addEventListener("keydown", (e) => {
     switch (e.key) {
         case "0":
