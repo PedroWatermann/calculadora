@@ -31,6 +31,7 @@ function limpaTela() {
 function calcular() {
     try {
         tela.value = eval(tela.value);
+        btnLimpar = true;
     } catch (error) {
         tela.value = "Erro";
     }
