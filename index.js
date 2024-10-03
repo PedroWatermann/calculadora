@@ -9,11 +9,17 @@ document.getElementById("limpar").addEventListener("click", () => {
     btnLimpar = true
 });
 
+window.onload = () => {
+    tela.value = 0;
+    btnLimpar = true;
+}
+
 function mostrarNaTela(char) {
     if (btnIgual || btnLimpar) {
         tela.value = "";
         tela.value += char;
         btnIgual = false;
+        btnLimpar = false;
     } else {
         tela.value += char;
     }
