@@ -22,6 +22,7 @@ body {
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.3);
     grid-template-rows: 1fr 4fr;
+    padding: 5px;
 }
 
 #tela {
