@@ -1,12 +1,15 @@
 const tela = document.getElementById("tela");
+const porcentagem = document.getElementById("porcentagem");
 let btnIgual;
 let btnLimpar;
+let operacao = '';
+let valor = tela.value;
 
 document.getElementById("igual").addEventListener("click", () => {
     btnIgual = true;
 });
 document.getElementById("limpar").addEventListener('click', () => {
-        btnLimpar = true;
+    btnLimpar = true;
 });
 window.onload = () => {
     tela.value = 0;
@@ -14,6 +17,9 @@ window.onload = () => {
 }
 
 function mostrarNaTela(char) {
+    let operadores = ['+', '-', '*', '/'];
+    let ultimoChar = tela.value.slice(-1);
+
     if (btnIgual || btnLimpar) {
         tela.value = "";
         tela.value += char;
@@ -33,7 +39,9 @@ function calcular() {
         tela.value = eval(tela.value);
         btnLimpar = true;
     } catch (error) {
-        tela.value = "Erro";
+        tela.value = error;
+    } finally {
+        operacao = '';
     }
 }
 
@@ -42,10 +50,12 @@ function apagaUm() {
     if (tela.value == "") {
         tela.value = 0;
         btnLimpar = true;
+    } else {
+        btnLimpar = false;
     }
 }
 
-// Poderia ser um if
+// Poderia ser um if para as funções iguais
 document.addEventListener("keydown", (e) => {
     switch (e.key) {
         case "0":
@@ -143,6 +153,7 @@ document.addEventListener("keydown", (e) => {
             } else {
                 tela.value += e.key;
             }
+            operacao = '+';
             break;
         case "/":
             if (btnLimpar) {
@@ -151,6 +162,7 @@ document.addEventListener("keydown", (e) => {
             } else {
                 tela.value += e.key;
             }
+            operacao = "/";
             break;
         case "*":
             if (btnLimpar) {
@@ -159,6 +171,7 @@ document.addEventListener("keydown", (e) => {
             } else {
                 tela.value += e.key;
             }
+            operacao = "*";
             break;
         case "-":
             if (btnLimpar) {
@@ -167,8 +180,12 @@ document.addEventListener("keydown", (e) => {
             } else {
                 tela.value += e.key;
             }
+            operacao = '-';
             break;
         case "c":
+            limpaTela();
+            break;
+        case "a":
             limpaTela();
             break;
         case "=":
@@ -179,6 +196,9 @@ document.addEventListener("keydown", (e) => {
             break;
         case "Backspace":
             apagaUm();
+            break;
+        case "%":
+            porcentagem();
             break;
     }
 });

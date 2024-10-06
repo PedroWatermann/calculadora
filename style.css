@@ -17,6 +17,11 @@ h1 {
     font-size: 40px;
 }
 
+footer {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
 #calculadora {
     display: grid;
     max-width: 290px;
@@ -64,6 +69,6 @@ button:active {
 }
 
 #igual {
-    grid-column-start: 1;
+    grid-column-start: 2;
     grid-column-end: 5;
 }

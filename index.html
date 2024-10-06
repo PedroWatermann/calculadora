@@ -13,27 +13,29 @@
     <div id="calculadora">
         <input id="tela" readonly>
         <div id="botoes">
+            <button id="limpar" onclick="limpaTela()">AC</button>
+            <button onclick="apagaUm()">C</button>
+            <!-- <button id="porcentagem" onclick="mostrarNaTela('%')">%</button> -->
+            <button onclick="mostrarNaTela('/')">/</button>
+            <button onclick="mostrarNaTela('*')">x</button>
             <button onclick="mostrarNaTela('7')">7</button>
             <button onclick="mostrarNaTela('8')">8</button>
             <button onclick="mostrarNaTela('9')">9</button>
-            <button onclick="mostrarNaTela('+')">+</button>
+            <button onclick="mostrarNaTela('-')">-</button>
             <button onclick="mostrarNaTela('4')">4</button>
             <button onclick="mostrarNaTela('5')">5</button>
             <button onclick="mostrarNaTela('6')">6</button>
-            <button onclick="mostrarNaTela('-')">-</button>
+            <button onclick="mostrarNaTela('+')">+</button>
             <button onclick="mostrarNaTela('1')">1</button>
             <button onclick="mostrarNaTela('2')">2</button>
             <button onclick="mostrarNaTela('3')">3</button>
-            <button onclick="mostrarNaTela('*')">*</button>
-            <button onclick="mostrarNaTela('0')">0</button>
-            <button id="limpar" onclick="limpaTela()">C</button>
             <button onclick="mostrarNaTela('.')">.</button>
-            <button onclick="mostrarNaTela('/')">/</button>
+            <button onclick="mostrarNaTela('0')">0</button>
             <button id="igual" onclick="calcular()">=</button>
         </div>
     </div>
 
-    <p>Developed by &#64;PedroWatermann</p>
+    <footer>Developed by &#64;PedroWatermann</footer>
 
     <script src="index.js"></script>
 </body>
